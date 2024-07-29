@@ -17,6 +17,18 @@ const Register = () => {
     const email = form.get("email");
     const photo = form.get("photo");
     const password = form.get("password");
+    if (password.length < 6) {
+      alert("Your password must contains at least 6 character");
+      return;
+    }
+    if (!/[A-Z]/.test(password)) {
+      alert("Your password must contain at least one uppercase letter");
+      return;
+    }
+    if (!/[a-z]/.test(password)) {
+      alert("Your password must contain at least one lowercase letter");
+      return;
+    }
     createUser(email, password)
       .then((res) => {
         console.log(res.user);

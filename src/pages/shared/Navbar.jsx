@@ -16,7 +16,7 @@ const Navbar = () => {
   );
 
   return (
-    <div className="navbar bg-base-100 shadow-sm">
+    <div className="navbar bg-base-100 shadow-sm ">
       <div className="navbar-start">
         <div className="dropdown">
           <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -60,10 +60,10 @@ const Navbar = () => {
           </summary>
           <ul className="menu dropdown-content bg-base-100 rounded-box z-[2] flex flex-col gap-1  w-40 p-2 shadow">
             <li>
-              <Link>Login</Link>
+              <Link to="/login">Login</Link>
             </li>
             <li>
-              <Link>Register</Link>
+              <Link to="/register">Register</Link>
             </li>
             <li>
               <Link>Profile</Link>

@@ -1,12 +1,16 @@
 import React, { useContext } from "react";
 import { AuthContext } from "../../providers/AuthProvider";
 import { FaUserCircle } from "react-icons/fa";
+import { Helmet } from "react-helmet-async";
 
 const Profile = () => {
   const { user } = useContext(AuthContext);
 
   return (
     <div className="p-4">
+      <Helmet>
+        <title>Profile</title>
+      </Helmet>
       <div className="text-center my-6">
         <h1 className="text-xl font-exo text-vsecondary font-semibold">
           Your Profile

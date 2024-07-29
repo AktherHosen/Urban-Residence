@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 import { AuthContext } from "../../providers/AuthProvider";
 import { updateProfile } from "firebase/auth";
 import toast from "react-hot-toast";
+import { Helmet } from "react-helmet-async";
 
 const Register = () => {
   const [showPassword, setShowPassword] = useState(false);
@@ -46,6 +47,9 @@ const Register = () => {
   };
   return (
     <div className="p-4">
+      <Helmet>
+        <title>Register</title>
+      </Helmet>
       <h1 className="text-center my-4 text-xl font-exo text-vsecondary font-semibold">
         Please Register
       </h1>

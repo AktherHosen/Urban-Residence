@@ -5,12 +5,15 @@ import Routes from "./routes/Routes.jsx";
 import { RouterProvider } from "react-router-dom";
 import AuthProvider from "./providers/AuthProvider.jsx";
 import { Toaster } from "react-hot-toast";
+import { HelmetProvider } from "react-helmet-async";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <AuthProvider>
-      <RouterProvider router={Routes} />
-      <Toaster />
-    </AuthProvider>
+    <HelmetProvider>
+      <AuthProvider>
+        <RouterProvider router={Routes} />
+        <Toaster />
+      </AuthProvider>
+    </HelmetProvider>
   </React.StrictMode>
 );

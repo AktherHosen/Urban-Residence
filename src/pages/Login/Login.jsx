@@ -1,10 +1,11 @@
 import React, { useContext, useState } from "react";
 import { IoEye } from "react-icons/io5";
 import { IoMdEyeOff } from "react-icons/io";
-import { Link, Navigate, useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { FaGithub, FaGoogle } from "react-icons/fa";
 import { AuthContext } from "../../providers/AuthProvider";
 import toast from "react-hot-toast";
+import { Helmet } from "react-helmet-async";
 const Login = () => {
   const { userLogin, googleSignIn, gitHubSignIn } = useContext(AuthContext);
   const [showPassword, setShowPassword] = useState(false);
@@ -39,6 +40,9 @@ const Login = () => {
   };
   return (
     <div className="p-4">
+      <Helmet>
+        <title>Login</title>
+      </Helmet>
       <h1 className="text-center my-4 text-xl font-exo text-vsecondary font-semibold">
         Please Login
       </h1>

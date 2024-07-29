@@ -3,6 +3,7 @@ import { IoEye } from "react-icons/io5";
 import { IoMdEyeOff } from "react-icons/io";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../../providers/AuthProvider";
+import { updateProfile } from "firebase/auth";
 const Register = () => {
   const [showPassword, setShowPassword] = useState(false);
   const { createUser } = useContext(AuthContext);
@@ -31,6 +32,13 @@ const Register = () => {
     }
     createUser(email, password)
       .then((res) => {
+        updateProfile(res.user, {
+          displayName: name,
+          photoURL: photo,
+        })
+          .then(() => console.log("profile updated"))
+          .catch();
+
         console.log(res.user);
         e.target.reset();
       })

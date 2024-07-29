@@ -61,7 +61,13 @@ const Navbar = () => {
       <div className="navbar-end">
         <details className="dropdown dropdown-end ">
           <summary className="btn outline-none border-none bg-transparent m-1">
-            <FaUserCircle size={25} />
+            {user ? (
+              <>
+                <img src={user.photoURL} className="h-10 rounded-full" alt="" />
+              </>
+            ) : (
+              <FaUserCircle size={25} />
+            )}
           </summary>
           <ul className="menu dropdown-content bg-base-100 rounded-box z-[2] flex flex-col gap-1  w-40 p-2 shadow">
             {user ? (
@@ -75,7 +81,7 @@ const Navbar = () => {
                   </button>
                 </li>
                 <li>
-                  <Link>Profile</Link>
+                  <Link to="/profile">Profile</Link>
                 </li>
                 <li>
                   <Link>Update Profile</Link>

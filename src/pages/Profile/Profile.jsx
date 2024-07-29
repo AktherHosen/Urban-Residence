@@ -13,10 +13,10 @@ const Profile = () => {
         </h1>
         <p>See Your Details, You can edit it also.</p>
       </div>
-      <div className="flex justify-center items-center ">
-        <div className="w-[450px] flex gap-3  border p-3">
+      <div className="flex  justify-center items-center p-6 ">
+        <div className="min-w-[450px] flex items-center md:items-center flex-col md:flex-row gap-3  border p-3">
           {user.photoURL ? (
-            <img src={user?.photoURL} className="h-50 w-50" alt="" />
+            <img src={user?.photoURL} className="h-40 w-40" alt="" />
           ) : (
             <>
               <FaUserCircle size={25} />

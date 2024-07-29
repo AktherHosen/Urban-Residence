@@ -4,6 +4,8 @@ import { IoMdEyeOff } from "react-icons/io";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../../providers/AuthProvider";
 import { updateProfile } from "firebase/auth";
+import toast from "react-hot-toast";
+
 const Register = () => {
   const [showPassword, setShowPassword] = useState(false);
   const { createUser } = useContext(AuthContext);
@@ -19,15 +21,15 @@ const Register = () => {
     const photo = form.get("photo");
     const password = form.get("password");
     if (password.length < 6) {
-      alert("Your password must contains at least 6 character");
+      toast.error("Your password must contains at least 6 character");
       return;
     }
     if (!/[A-Z]/.test(password)) {
-      alert("Your password must contain at least one uppercase letter");
+      toast.error("Your password must contain at least one uppercase letter");
       return;
     }
     if (!/[a-z]/.test(password)) {
-      alert("Your password must contain at least one lowercase letter");
+      toast.error("Your password must contain at least one lowercase letter");
       return;
     }
     createUser(email, password)
@@ -36,13 +38,11 @@ const Register = () => {
           displayName: name,
           photoURL: photo,
         })
-          .then(() => console.log("profile updated"))
-          .catch();
-
-        console.log(res.user);
+          .then(() => toast.success("profile updated"))
+          .catch((error) => toast.error(error));
         e.target.reset();
       })
-      .then((error) => console.error(error));
+      .catch((error) => toast.error(error));
   };
   return (
     <div className="p-4">

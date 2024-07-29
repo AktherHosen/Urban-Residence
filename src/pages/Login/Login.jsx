@@ -1,13 +1,14 @@
 import React, { useContext, useState } from "react";
 import { IoEye } from "react-icons/io5";
 import { IoMdEyeOff } from "react-icons/io";
-import { Link } from "react-router-dom";
+import { Link, Navigate, useNavigate } from "react-router-dom";
 import { FaGithub, FaGoogle } from "react-icons/fa";
 import { AuthContext } from "../../providers/AuthProvider";
+import toast from "react-hot-toast";
 const Login = () => {
   const { userLogin, googleSignIn, gitHubSignIn } = useContext(AuthContext);
   const [showPassword, setShowPassword] = useState(false);
-
+  const navigate = useNavigate();
   const togglePasswordVisibility = () => {
     setShowPassword(!showPassword);
   };
@@ -18,18 +19,23 @@ const Login = () => {
     const password = form.get("password");
     userLogin(email, password)
       .then((res) => {
-        console.log(res.user);
+        toast.success("Logged in Successfully");
         e.target.reset();
+        navigate("/");
       })
-      .catch((error) => console.error(error));
+      .catch((error) => toast.error(error));
   };
 
   const handleGoogleSignIn = () => {
-    googleSignIn().then().catch();
+    googleSignIn()
+      .then()
+      .catch((error) => toast.error(error));
   };
 
   const handleGitHubSignIn = () => {
-    gitHubSignIn().then().catch();
+    gitHubSignIn()
+      .then()
+      .catch((error) => toast.error(error));
   };
   return (
     <div className="p-4">

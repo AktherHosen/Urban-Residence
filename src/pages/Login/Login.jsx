@@ -1,13 +1,35 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import { IoEye } from "react-icons/io5";
 import { IoMdEyeOff } from "react-icons/io";
 import { Link } from "react-router-dom";
 import { FaGithub, FaGoogle } from "react-icons/fa";
+import { AuthContext } from "../../providers/AuthProvider";
 const Login = () => {
+  const { userLogin, googleSignIn, gitHubSignIn } = useContext(AuthContext);
   const [showPassword, setShowPassword] = useState(false);
 
   const togglePasswordVisibility = () => {
     setShowPassword(!showPassword);
+  };
+  const handleLogin = (e) => {
+    e.preventDefault();
+    const form = new FormData(e.currentTarget);
+    const email = form.get("email");
+    const password = form.get("password");
+    userLogin(email, password)
+      .then((res) => {
+        console.log(res.user);
+        e.target.reset();
+      })
+      .catch((error) => console.error(error));
+  };
+
+  const handleGoogleSignIn = () => {
+    googleSignIn().then().catch();
+  };
+
+  const handleGitHubSignIn = () => {
+    gitHubSignIn().then().catch();
   };
   return (
     <div className="p-4">
@@ -16,8 +38,8 @@ const Login = () => {
       </h1>
       <div className="flex justify-center">
         <div className="w-full md:w-[450px]  flex flex-col justify-center border shadow-sm p-4">
-          <form action="" className="">
-            <label htmlFor="email">Email</label>
+          <form onSubmit={handleLogin}>
+            <label className="label">Email</label>
             <input
               type="email"
               name="email"
@@ -25,8 +47,7 @@ const Login = () => {
               placeholder="Enter your email"
             />
             <div className="relative">
-              <label htmlFor="password">Password</label>
-              <br />
+              <label className="label">Password</label>
               <input
                 type={showPassword ? "text" : "password"}
                 name="password"
@@ -34,7 +55,7 @@ const Login = () => {
                 placeholder="Enter your password"
               />
               <span
-                className="absolute right-3 top-[65%] transform -translate-y-1/2 cursor-pointer"
+                className="absolute right-3 top-[75%] transform -translate-y-1/2 cursor-pointer"
                 onClick={togglePasswordVisibility}
               >
                 {showPassword ? <IoMdEyeOff /> : <IoEye />}
@@ -53,10 +74,16 @@ const Login = () => {
           <div className="mt-2">
             <p className="text-center font-exo">Sign in with</p>
             <div className="flex justify-center gap-4">
-              <button className="border bg-orange-500 text-white rounded-sm p-1">
+              <button
+                onClick={handleGoogleSignIn}
+                className="border bg-orange-500 text-white rounded-sm p-1"
+              >
                 <FaGoogle size={25} />
               </button>
-              <button className="border bg-black text-white rounded-sm p-1">
+              <button
+                onClick={handleGitHubSignIn}
+                className="border bg-black text-white rounded-sm p-1"
+              >
                 <FaGithub size={25} />
               </button>
             </div>

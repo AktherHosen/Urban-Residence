@@ -1,12 +1,28 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import { IoEye } from "react-icons/io5";
 import { IoMdEyeOff } from "react-icons/io";
 import { Link } from "react-router-dom";
+import { AuthContext } from "../../providers/AuthProvider";
 const Register = () => {
   const [showPassword, setShowPassword] = useState(false);
-
+  const { createUser } = useContext(AuthContext);
   const togglePasswordVisibility = () => {
     setShowPassword(!showPassword);
+  };
+
+  const handleRegister = (e) => {
+    e.preventDefault();
+    const form = new FormData(e.currentTarget);
+    const name = form.get("name");
+    const email = form.get("email");
+    const photo = form.get("photo");
+    const password = form.get("password");
+    createUser(email, password)
+      .then((res) => {
+        console.log(res.user);
+        e.target.reset();
+      })
+      .then((error) => console.error(error));
   };
   return (
     <div className="p-4">
@@ -14,22 +30,25 @@ const Register = () => {
         Please Register
       </h1>
       <div className="flex justify-center">
-        <form action="" className="w-full md:w-[450px] border shadow-sm p-4">
-          <label htmlFor="name">Name</label>
+        <form
+          onSubmit={handleRegister}
+          className="w-full md:w-[450px] border shadow-sm p-4"
+        >
+          <label className="label">Name</label>
           <input
             type="text"
             name="name"
             className="block border rounded-sm px-3 py-2 my-1 w-full"
             placeholder="Enter your name"
           />
-          <label htmlFor="photo">Photo Url</label>
+          <label className="label">Photo Url</label>
           <input
             type="text"
             name="photo"
             className="block border rounded-sm px-3 py-2 my-1 w-full"
             placeholder="Enter your photo url"
           />
-          <label htmlFor="email">Email</label>
+          <label className="label">Email</label>
           <input
             type="email"
             name="email"
@@ -37,8 +56,8 @@ const Register = () => {
             placeholder="Enter your email"
           />
           <div className="relative">
-            <label htmlFor="password">Password</label>
-            <br />
+            <label className="label">Password</label>
+
             <input
               type={showPassword ? "text" : "password"}
               name="password"
@@ -47,7 +66,7 @@ const Register = () => {
             />
 
             <span
-              className="absolute right-3 top-[65%] transform -translate-y-1/2 cursor-pointer"
+              className="absolute right-3 top-[75%] transform -translate-y-1/2 cursor-pointer"
               onClick={togglePasswordVisibility}
             >
               {showPassword ? <IoMdEyeOff /> : <IoEye />}

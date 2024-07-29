@@ -1,8 +1,10 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Link, NavLink } from "react-router-dom";
 import logo from "/logo.png";
 import { FaUserCircle } from "react-icons/fa";
+import { AuthContext } from "../../providers/AuthProvider";
 const Navbar = () => {
+  const { user, userLogOut } = useContext(AuthContext);
   const navLink = (
     <>
       <li>
@@ -15,6 +17,9 @@ const Navbar = () => {
     </>
   );
 
+  const handleLogOut = () => {
+    userLogOut().then().catch();
+  };
   return (
     <div className="navbar bg-base-100 shadow-sm ">
       <div className="navbar-start">
@@ -45,7 +50,7 @@ const Navbar = () => {
         <div className="flex items-center">
           <img src={logo} className="h-12" alt="" />
           <h2 className="uppercase font-bold text-start text-sm font-exo">
-            Urban <br />{" "}
+            Urban <br />
             <span className="text-vsecondary text-lg ">Residence</span>
           </h2>
         </div>
@@ -59,18 +64,33 @@ const Navbar = () => {
             <FaUserCircle size={25} />
           </summary>
           <ul className="menu dropdown-content bg-base-100 rounded-box z-[2] flex flex-col gap-1  w-40 p-2 shadow">
-            <li>
-              <Link to="/login">Login</Link>
-            </li>
-            <li>
-              <Link to="/register">Register</Link>
-            </li>
-            <li>
-              <Link>Profile</Link>
-            </li>
-            <li>
-              <Link>Update Profile</Link>
-            </li>
+            {user ? (
+              <>
+                <li>
+                  <button
+                    onClick={handleLogOut}
+                    className="bg-red-500 text-white hover:bg-red-500"
+                  >
+                    Logout
+                  </button>
+                </li>
+                <li>
+                  <Link>Profile</Link>
+                </li>
+                <li>
+                  <Link>Update Profile</Link>
+                </li>
+              </>
+            ) : (
+              <>
+                <li>
+                  <Link to="/login">Login</Link>
+                </li>
+                <li>
+                  <Link to="/register">Register</Link>
+                </li>
+              </>
+            )}
           </ul>
         </details>
       </div>

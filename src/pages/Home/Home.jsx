@@ -3,6 +3,7 @@ import Banner from "./Banner";
 import Properties from "./Properties";
 import { Helmet } from "react-helmet-async";
 import Features from "../../components/Features/Features";
+import Contact from "../../components/Contact/Contact";
 
 const Home = () => {
   return (
@@ -13,6 +14,7 @@ const Home = () => {
       <Banner />
       <Properties />
       <Features />
+      {/* <Contact /> */}
     </div>
   );
 };

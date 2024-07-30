@@ -1,5 +1,4 @@
 import React from "react";
-import slider1 from "../../assets/slider1.jpg";
 import { HiOutlineCurrencyBangladeshi } from "react-icons/hi2";
 import { IoBed, IoCarSport } from "react-icons/io5";
 import { FaBath, FaMap } from "react-icons/fa";
@@ -10,15 +9,12 @@ const PropertiesCard = ({ estate }) => {
     id,
     estate_title,
     image,
-    segment_name,
     description,
     price,
     status,
     area,
     bed,
     bath,
-    location,
-    facilities,
   } = estate;
   return (
     <div>
@@ -26,7 +22,7 @@ const PropertiesCard = ({ estate }) => {
       <div className="w-full md:w-auto border shadow-md ">
         <div className="overflow-hidden w-full h-64 relative">
           <img
-            src={slider1}
+            src={image}
             className="w-full h-full object-cover transform transition-transform duration-500 hover:scale-110"
             alt="Zoomable"
           />

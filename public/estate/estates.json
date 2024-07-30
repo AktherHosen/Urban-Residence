@@ -2,7 +2,7 @@
   {
     "id": 1,
     "estate_title": "Luxury Family Home",
-    "image": "https://example.com/images/estate1.jpg",
+    "image": "https://i.ibb.co/bKH3ZnW/modern-town-house-min.jpg",
     "segment_name": "Single-Family Home",
     "description": "This Luxury Family Home is the epitome of elegance and comfort, located in the highly sought-after neighborhood of Springfield. Spread across a sprawling 2500 sq ft, this residence offers ample space for a growing family. The home features a grand living room with high ceilings, a state-of-the-art kitchen with modern appliances, and a spacious dining area perfect for entertaining guests. The master bedroom is a private retreat with an en-suite bathroom and a walk-in closet. Additional bedrooms are well-sized and share access to beautifully appointed bathrooms. Outside, the property boasts a stunning swimming pool, a well-maintained garden, and a garage with ample storage space. This home also includes a variety of premium amenities such as a home office, a gym, and a playroom for children. The location is prime, with easy access to top-rated schools, shopping centers, and recreational facilities. This estate is currently available for sale at $500,000. Whether you are looking to enjoy quiet family moments or host grand gatherings, this Luxury Family Home offers everything you need and more. Don't miss the opportunity to make this exquisite property your new home.",
     "price": "500,000",
@@ -22,7 +22,7 @@
   {
     "id": 2,
     "estate_title": "Modern Townhouse",
-    "image": "https://example.com/images/estate2.jpg",
+    "image": "https://i.ibb.co/jTMRGRW/luxury-family-house-min.jpg",
     "segment_name": "Townhouse",
     "description": "Located in the heart of the city, this Modern Townhouse offers a perfect blend of luxury and convenience. Spanning 1800 sq ft, this townhouse is designed for contemporary living with an open floor plan that seamlessly connects the living room, dining area, and a sleek kitchen equipped with top-of-the-line appliances. The master suite is a haven of tranquility with its private balcony and spa-like bathroom. Additional bedrooms are spacious and provide ample closet space. The townhouse also features a private rooftop terrace, perfect for entertaining or enjoying city views. Residents have access to a shared gym and a community garden. The property is situated close to public transport, shopping districts, and top-rated schools, making it ideal for families and professionals alike. Currently available for rent at $3,000 per month, this townhouse offers the best of urban living with a touch of elegance. Experience the vibrant lifestyle of city living with all the comforts of a modern home.",
     "price": "3,000 / month",
@@ -42,7 +42,7 @@
   {
     "id": 3,
     "estate_title": "Student Apartment",
-    "image": "https://example.com/images/estate3.jpg",
+    "image": "https://i.ibb.co/NNTwBJS/student-apartment-min.jpg",
     "segment_name": "Apartment",
     "description": "Ideal for students, this modern apartment is located just minutes away from the city's top universities and colleges. Covering 800 sq ft, the apartment includes a comfortable living room, a functional kitchen, and a cozy bedroom with ample study space. The apartment complex offers numerous amenities tailored for student living, including high-speed internet, a study lounge, and a recreation area. Safety is a priority with 24/7 security and on-site management. The apartment's location is unbeatable, with easy access to public transportation, libraries, cafes, and bookstores. Rent is affordably priced at $1,000 per month, making it an excellent option for students looking for convenience and comfort. This student apartment provides a supportive environment for academic success and a balanced lifestyle. It's the perfect place to call home during your university years.",
     "price": "1,000 / month",
@@ -56,7 +56,7 @@
   {
     "id": 4,
     "estate_title": "Senior Living Community Home",
-    "image": "https://example.com/images/estate4.jpg",
+    "image": "https://i.ibb.co/hg8jMzv/community-home-min.jpg",
     "segment_name": "Senior Living Community",
     "description": "This home in a Senior Living Community is designed to offer a serene and supportive environment for retirees. The 1200 sq ft residence includes a spacious living room, a modern kitchen, and a comfortable bedroom with an en-suite bathroom. The community provides numerous amenities including a wellness center, a communal dining area, and landscaped gardens. Social activities and fitness programs are regularly organized to keep residents engaged and active. The home is located in a quiet neighborhood with easy access to healthcare facilities, shopping centers, and recreational areas. Available for rent at $2,500 per month, this home provides a safe and nurturing environment where seniors can enjoy their golden years in comfort and dignity. The community ensures a high quality of life with a focus on health, happiness, and social connection.",
     "price": "2,500 / month",
@@ -76,7 +76,7 @@
   {
     "id": 5,
     "estate_title": "Beachfront Vacation Rental",
-    "image": "https://example.com/images/estate5.jpg",
+    "image": "https://i.ibb.co/8cDSWbT/vacation-rental-min.jpg",
     "segment_name": "Vacation Rental",
     "description": "This stunning Beachfront Vacation Rental offers an idyllic escape with breathtaking ocean views and direct access to the beach. The 1500 sq ft property includes a spacious living area with floor-to-ceiling windows, a fully equipped kitchen, and two comfortable bedrooms each with its own bathroom. The outdoor space is perfect for relaxation, featuring a private patio, a barbecue area, and a swimming pool. Guests can enjoy a range of activities such as beach sports, snorkeling, and fishing. Located in a tranquil coastal town, the rental is close to local restaurants, shops, and cultural attractions. Available for rent at $400 per night, this vacation rental promises a memorable and relaxing getaway for families and groups. Experience the ultimate beach vacation with all the comforts of home in this luxurious and well-appointed rental property.",
     "price": "400 / night",

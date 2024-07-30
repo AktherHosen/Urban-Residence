@@ -1,16 +1,9 @@
-import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
-
 import "../../index.css";
 import { Autoplay, Pagination } from "swiper/modules";
-
-import slider1 from "../../assets/slider1.jpg";
-import slider2 from "../../assets/slider2.jpg";
-import slider3 from "../../assets/slider3.jpg";
-import slider4 from "../../assets/slider4.jpg";
 
 const Banner = () => {
   return (
@@ -43,16 +36,32 @@ const Banner = () => {
             className="mySwiper"
           >
             <SwiperSlide>
-              <img src={slider1} className="h-full" alt="" />
+              <img
+                src="https://i.ibb.co/p2G0z0r/slider1-min.jpg"
+                className="h-full"
+                alt=""
+              />
             </SwiperSlide>
             <SwiperSlide>
-              <img src={slider2} className="h-full" alt="" />
+              <img
+                src="https://i.ibb.co/r0ptCws/slider2-min.jpg"
+                className="h-full"
+                alt=""
+              />
             </SwiperSlide>
             <SwiperSlide>
-              <img src={slider3} className="h-full" alt="" />
+              <img
+                src="https://i.ibb.co/cYbGZcV/slider3-min.jpg"
+                className="h-full"
+                alt=""
+              />
             </SwiperSlide>
             <SwiperSlide>
-              <img src={slider4} className="h-full" alt="" />
+              <img
+                src="https://i.ibb.co/H4XN3DC/slider4-min.jpg"
+                className="h-full"
+                alt=""
+              />
             </SwiperSlide>
           </Swiper>
         </div>

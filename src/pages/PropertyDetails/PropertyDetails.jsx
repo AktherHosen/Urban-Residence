@@ -1,7 +1,6 @@
 import React from "react";
 import { Helmet } from "react-helmet-async";
 import { useLoaderData, useParams } from "react-router-dom";
-import slider1 from "../../assets/slider1.jpg";
 import { FaMapLocationDot } from "react-icons/fa6";
 import { HiOutlineCurrencyBangladeshi } from "react-icons/hi2";
 import { IoBed, IoCarSport } from "react-icons/io5";
@@ -34,7 +33,7 @@ const PropertyDetails = () => {
       </h1>
       <div className="flex flex-col md:flex-row gap-4 border rounded-md shadow-sm p-2">
         <div className="w-full md:w-1/3">
-          <img src={slider1} className="h-full w-full" alt="" />
+          <img src={image} className="h-full w-full" alt="" />
         </div>
         <div className="w-full md:w-2/3 flex flex-col justify-center space-y-2 p-2">
           <h1 className="text-xl font-exo font-semibold">{estate_title}</h1>

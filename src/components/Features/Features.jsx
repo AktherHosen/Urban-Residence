@@ -1,13 +1,18 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { LiaHandshakeSolid } from "react-icons/lia";
 import { MdOutlineHomeWork } from "react-icons/md";
 import { PiClipboardText } from "react-icons/pi";
 import { MdOutlineVilla } from "react-icons/md";
+import Aos from "aos";
+import "aos/dist/aos.css";
 const Features = () => {
+  useEffect(() => {
+    Aos.init({ duration: "1200" });
+  }, []);
   return (
-    <div className="p-4 my-6">
+    <div className="p-4 my-6 " data-aos="fade-right">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4 h-fit md:h-[400px]">
-        <div className="grid grid-cols-3 gap-3">
+        <div className="grid grid-cols-3 gap-3 " data-aos="fade-right">
           <div className="overflow-hidden w-full h-full relative rounded-2xl">
             <img
               src="https://i.ibb.co/XZqqjLW/feature1.jpg"
@@ -30,7 +35,10 @@ const Features = () => {
             />
           </div>
         </div>
-        <div className="flex flex-col justify-center p-4 space-y-3">
+        <div
+          className="flex flex-col justify-center p-4 space-y-3"
+          data-aos="fade-left"
+        >
           <h1 className="font-semibold text-3xl font-exo">
             Find your new home <br /> with us
           </h1>

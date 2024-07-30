@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Banner from "./Banner";
 import Properties from "./Properties";
 import { Helmet } from "react-helmet-async";
@@ -12,8 +12,8 @@ const Home = () => {
         <title>Home</title>
       </Helmet>
       <Banner />
-      <Properties />
-      <Features />
+      <Properties data-aos="fade-right" />
+      <Features data-aos="fade-left" />
       {/* <Contact /> */}
     </div>
   );

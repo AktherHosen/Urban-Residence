@@ -1,10 +1,14 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Helmet } from "react-helmet-async";
 import { useLoaderData, useParams } from "react-router-dom";
 import { FaMapLocationDot } from "react-icons/fa6";
 import { HiOutlineCurrencyBangladeshi } from "react-icons/hi2";
 import { IoBed, IoCarSport } from "react-icons/io5";
 import { FaBath, FaMap } from "react-icons/fa";
+
+import Aos from "aos";
+import "aos/dist/aos.css";
+
 const PropertyDetails = () => {
   const { id } = useParams();
   const idInt = parseInt(id);
@@ -23,6 +27,11 @@ const PropertyDetails = () => {
     location,
     facilities,
   } = estate;
+
+  useEffect(() => {
+    Aos.init({ duration: "1200" });
+  }, []);
+
   return (
     <div className="p-4 font-exo">
       <Helmet>
@@ -31,7 +40,10 @@ const PropertyDetails = () => {
       <h1 className="text-center my-4 text-xl font-exo text-vsecondary font-semibold">
         Property Details
       </h1>
-      <div className="flex flex-col md:flex-row gap-4 border rounded-md shadow-sm p-2">
+      <div
+        className="flex flex-col md:flex-row gap-4 border rounded-md shadow-sm p-2"
+        data-aos="zoom-in-right"
+      >
         <div className="w-full md:w-1/3">
           <img src={image} className="h-full w-full" alt="" />
         </div>

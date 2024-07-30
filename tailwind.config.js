@@ -4,7 +4,7 @@ export default {
   theme: {
     extend: {
       textColor: {
-        vprimary: "#bbb",
+        vprimary: "#929191",
         vsecondary: "#4e3482",
       },
       fontFamily: {

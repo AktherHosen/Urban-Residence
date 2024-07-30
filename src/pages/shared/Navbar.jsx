@@ -8,11 +8,7 @@ const Navbar = () => {
   const navLink = (
     <>
       <li>
-        <NavLink>Home</NavLink>
-      </li>
-
-      <li>
-        <NavLink>About</NavLink>
+        <NavLink to="/">Home</NavLink>
       </li>
     </>
   );
@@ -59,8 +55,12 @@ const Navbar = () => {
         <ul className="menu menu-horizontal px-1 flex gap-x-2">{navLink}</ul>
       </div>
       <div className="navbar-end">
-        <details className="dropdown dropdown-end ">
-          <summary className="btn outline-none border-none bg-transparent m-1">
+        <div className="dropdown  dropdown-end">
+          <div
+            tabIndex={0}
+            role="button"
+            className="bg-transparent border-none m-1"
+          >
             {user ? (
               <>
                 <img src={user.photoURL} className="h-10 rounded-full" alt="" />
@@ -68,28 +68,31 @@ const Navbar = () => {
             ) : (
               <FaUserCircle size={25} />
             )}
-          </summary>
-          <ul className="menu dropdown-content bg-base-100 rounded-box z-[2] flex flex-col gap-1  w-40 p-2 shadow">
+          </div>
+          <ul
+            tabIndex={0}
+            className="dropdown-content menu bg-base-100 space-y-1 rounded-box z-[3] w-52 p-2 shadow"
+          >
             {user ? (
               <>
                 <li>
                   <button
                     onClick={handleLogOut}
-                    className="bg-red-500 text-white hover:bg-red-500"
+                    className=" hover:bg-red-500 hover:text-white"
                   >
                     Logout
                   </button>
                 </li>
-                <li>
+                <li className="">
                   <Link to="/profile">Profile</Link>
                 </li>
                 <li>
-                  <Link>Update Profile</Link>
+                  <Link to={`/updateProfile/${user.uid}`}>Update Profile</Link>
                 </li>
               </>
             ) : (
               <>
-                <li>
+                <li className="">
                   <Link to="/login">Login</Link>
                 </li>
                 <li>
@@ -98,7 +101,7 @@ const Navbar = () => {
               </>
             )}
           </ul>
-        </details>
+        </div>
       </div>
     </div>
   );

@@ -7,7 +7,7 @@ import { RiTwitterXLine } from "react-icons/ri";
 import { FaWhatsapp } from "react-icons/fa";
 const Footer = () => {
   return (
-    <div>
+    <div className="mt-4">
       <div className="grid grid-cols-4 gap-6 p-4 border-b">
         <div className="space-y-2 col-span-4 md:col-span-2">
           <h3 className="text-lg font-semibold">About</h3>

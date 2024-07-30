@@ -18,8 +18,8 @@ const Profile = () => {
         </h1>
         <p>See Your Details, You can edit it also.</p>
       </div>
-      <div className="flex  justify-center items-center p-6 ">
-        <div className="min-w-[450px] h-fit lg:h-[300px] flex items-center md:items-center flex-col md:flex-row gap-3  border p-3">
+      <div className="flex justify-center items-center  ">
+        <div className="w-full lg:w-[600px] h-fit lg:h-[300px] flex items-center md:items-center flex-col md:flex-row gap-3  border p-3">
           {user.photoURL ? (
             <img src={user?.photoURL} className="h-full w-64" alt="" />
           ) : (

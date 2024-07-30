@@ -37,7 +37,7 @@ const UpdateProfile = () => {
   return (
     <div className="p-4">
       <Helmet>
-        <title>Profile</title>
+        <title>Update Profile</title>
       </Helmet>
       <div className="text-center my-6 flex flex-col justify-center items-center gap-4">
         <h1 className="text-xl font-exo text-vsecondary font-semibold">

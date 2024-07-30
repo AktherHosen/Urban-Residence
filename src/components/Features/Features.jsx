@@ -7,7 +7,7 @@ import Aos from "aos";
 import "aos/dist/aos.css";
 const Features = () => {
   useEffect(() => {
-    Aos.init({ duration: "1200" });
+    Aos.init({ duration: "1000" });
   }, []);
   return (
     <div className="p-4 my-6 " data-aos="fade-right">
@@ -39,7 +39,7 @@ const Features = () => {
           className="flex flex-col justify-center p-4 space-y-3"
           data-aos="fade-left"
         >
-          <h1 className="font-semibold text-3xl font-exo">
+          <h1 className=" animate__animated animate__fadeInDown animate__delay-2s font-semibold text-3xl font-exo">
             Find your new home <br /> with us
           </h1>
           <p className="font-exo">

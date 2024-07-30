@@ -10,7 +10,7 @@ const Banner = () => {
     <div className="p-4">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
         <div className="flex flex-col justify-center items-center md:items-start space-y-3">
-          <h1 className="text-4xl font-semibold text-center md:text-start font-exo">
+          <h1 className="animate__animated animate__bounceInDown animate__delay-1s  text-4xl font-semibold text-center md:text-start font-exo">
             The <br />
             <span className="text-vsecondary">Urban Residence</span> <br /> Real
             Estate Ltd.

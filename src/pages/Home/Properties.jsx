@@ -1,12 +1,13 @@
 import { useLoaderData } from "react-router-dom";
 import PropertiesCard from "./PropertiesCard";
+import "animate.css";
+
 const Properties = () => {
   const estates = useLoaderData();
-  // console.log(estates);
   return (
     <div className="p-4">
       <div className="text-center my-6">
-        <h1 className="text-xl font-exo text-vsecondary font-semibold">
+        <h1 className=" animate__animated animate__fadeInDown animate__delay-1s animate__repeat-2  text-xl font-exo text-vsecondary font-semibold">
           Latest Properties
         </h1>
         <p>List and order properties as you wish</p>

@@ -10,6 +10,9 @@ const Navbar = () => {
       <li>
         <NavLink to="/">Home</NavLink>
       </li>
+      <li>
+        <NavLink to="/agents">Agents</NavLink>
+      </li>
     </>
   );
 
@@ -43,13 +46,16 @@ const Navbar = () => {
             {navLink}
           </ul>
         </div>
-        <div className="flex items-center">
-          <img src={logo} className="h-12" alt="" />
-          <h2 className="uppercase font-bold text-start text-sm font-exo">
-            Urban <br />
-            <span className="text-vsecondary text-lg ">Residence</span>
-          </h2>
-        </div>
+
+        <Link to="/">
+          <div className="flex items-center">
+            <img src={logo} className="h-12" alt="" />
+            <h2 className="uppercase font-bold text-start text-sm font-exo">
+              Urban <br />
+              <span className="text-vsecondary text-lg ">Residence</span>
+            </h2>
+          </div>
+        </Link>
       </div>
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1 flex gap-x-2">{navLink}</ul>

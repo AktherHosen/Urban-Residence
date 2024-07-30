@@ -9,6 +9,7 @@ import PrivateRoutes from "./PrivateRoutes";
 import Error from "../pages/Error/Error";
 import PropertyDetails from "../pages/PropertyDetails/PropertyDetails";
 import UpdateProfile from "../pages/Profile/UpdateProfile";
+import Agents from "../pages/Agents/Agents";
 
 const Routes = createBrowserRouter([
   {
@@ -42,6 +43,14 @@ const Routes = createBrowserRouter([
         element: (
           <PrivateRoutes>
             <UpdateProfile />
+          </PrivateRoutes>
+        ),
+      },
+      {
+        path: "/agents",
+        element: (
+          <PrivateRoutes>
+            <Agents />
           </PrivateRoutes>
         ),
       },

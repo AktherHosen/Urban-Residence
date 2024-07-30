@@ -12,8 +12,8 @@ const Home = () => {
         <title>Home</title>
       </Helmet>
       <Banner />
-      <Properties data-aos="fade-right" />
-      <Features data-aos="fade-left" />
+      <Properties />
+      <Features />
       {/* <Contact /> */}
     </div>
   );

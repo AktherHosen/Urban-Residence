@@ -29,15 +29,15 @@ const PropertyDetails = () => {
   } = estate;
 
   useEffect(() => {
-    Aos.init({ duration: "1200" });
+    Aos.init({ duration: "1000" });
   }, []);
 
   return (
-    <div className="p-4 font-exo">
+    <div className="p-4 font-exo my-4">
       <Helmet>
         <title>Property Details</title>
       </Helmet>
-      <h1 className="text-center my-4 text-xl font-exo text-vsecondary font-semibold">
+      <h1 className="animate__animated animate__bounce  animate__delay-2s animate__repeat-2  text-center my-4 text-xl font-exo text-vsecondary font-semibold">
         Property Details
       </h1>
       <div

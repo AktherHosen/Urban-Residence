@@ -1,9 +1,12 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { HiOutlineCurrencyBangladeshi } from "react-icons/hi2";
 import { IoBed, IoCarSport } from "react-icons/io5";
 import { FaBath, FaMap } from "react-icons/fa";
 
 import { Link } from "react-router-dom";
+import Aos from "aos";
+import "aos/dist/aos.css";
+
 const PropertiesCard = ({ estate }) => {
   const {
     id,
@@ -16,10 +19,13 @@ const PropertiesCard = ({ estate }) => {
     bed,
     bath,
   } = estate;
+  useEffect(() => {
+    Aos.init({ duration: "1000" });
+  }, []);
+
   return (
     <div>
-      <p>{estate.length}</p>
-      <div className="w-full md:w-auto border shadow-md ">
+      <div className="w-full md:w-auto border shadow-md " data-aos="fade-up">
         <div className="overflow-hidden w-full h-64 relative">
           <img
             src={image}
